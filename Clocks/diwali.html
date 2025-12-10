@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali 2025 - Festival of Lights 🪔</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        body.light {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #ea580c 100%);
+            color: #fef3c7;
+        }
+
+        body.dark {
+            background: linear-gradient(135deg, #92400e 0%, #78350f 50%, #1e293b 100%);
+            color: #fef3c7;
+        }
+
+        body.night {
+            background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #312e81 100%);
+            color: #fef3c7;
+        }
+
+        body.celebration {
+            animation: diwali-sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes diwali-sparkle {
+            0%, 100% {
+                background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #ea580c 100%);
+            }
+            33% {
+                background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);
+            }
+            66% {
+                background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
+            }
+        }
+
+        /* Floating diyas */
+        .diyas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .diya {
+            position: absolute;
+            font-size: 2.5em;
+            animation: float-diya 20s infinite ease-in-out;
+            filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.8));
+        }
+
+        @keyframes float-diya {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(50px) rotate(180deg);
+                opacity: 0;
+            }
+        }
+
+        /* Sparkles */
+        .sparkles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 1.5em;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: burst 1.5s ease-out forwards;
+        }
+
+        @keyframes burst {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(70);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInScale 1s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .header h1 {
+            font-size: 4.5em;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #fbbf24, #f59e0b, #fb923c, #f59e0b, #fbbf24);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-flow 3s ease infinite;
+            text-shadow: 0 0 40px rgba(251, 191, 36, 0.5);
+            letter-spacing: -2px;
+        }
+
+        @keyframes gradient-flow {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .rangoli {
+            font-size: 5em;
+            margin: 20px 0;
+            animation: rotate-rangoli 10s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes rotate-rangoli {
+            from {
+                transform: rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #fde68a;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            background: rgba(251, 191, 36, 0.2);
+            color: inherit;
+            border: 2px solid rgba(251, 191, 36, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(251, 191, 36, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+
+        .btn.active {
+            background: rgba(251, 191, 36, 0.4);
+            border-color: rgba(251, 191, 36, 0.8);
+        }
+
+        .clock-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .digital-clock, .analog-clock {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .digital-clock.active, .analog-clock.active {
+            display: block;
+        }
+
+        .time-display {
+            font-size: 6em;
+            font-weight: 800;
+            text-shadow: 0 0 40px rgba(251, 191, 36, 1), 0 0 80px rgba(251, 146, 60, 0.5);
+            margin-bottom: 20px;
+            font-variant-numeric: tabular-nums;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 40px rgba(251, 191, 36, 1), 0 0 80px rgba(251, 146, 60, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 60px rgba(251, 191, 36, 1), 0 0 120px rgba(251, 146, 60, 0.8);
+            }
+        }
+
+        .analog-clock-face {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(249, 115, 22, 0.2));
+            backdrop-filter: blur(20px);
+            border: 8px solid rgba(251, 191, 36, 0.5);
+            position: relative;
+            margin: 30px auto;
+            box-shadow: 0 0 60px rgba(251, 191, 36, 0.6), inset 0 0 40px rgba(251, 191, 36, 0.2);
+        }
+
+        .clock-center {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fbbf24, #f59e0b);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 1);
+        }
+
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        .hour-hand {
+            width: 8px;
+            height: 90px;
+            margin-left: -4px;
+            background: linear-gradient(180deg, #fbbf24, #f59e0b);
+        }
+
+        .minute-hand {
+            width: 6px;
+            height: 120px;
+            margin-left: -3px;
+            background: linear-gradient(180deg, #fde68a, #fbbf24);
+        }
+
+        .second-hand {
+            width: 3px;
+            height: 140px;
+            margin-left: -1.5px;
+            background: linear-gradient(180deg, #fb923c, #ea580c);
+        }
+
+        .countdown-section {
+            margin: 50px 0;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .countdown-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(249, 115, 22, 0.15));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 35px 20px;
+            text-align: center;
+            border: 2px solid rgba(251, 191, 36, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                left: 100%;
+            }
+        }
+
+        .countdown-box:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(251, 191, 36, 0.4);
+            border-color: rgba(251, 191, 36, 0.8);
+        }
+
+        .countdown-number {
+            font-size: 4.5em;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(251, 191, 36, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-label {
+            font-size: 1.2em;
+            opacity: 0.95;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .celebration-message {
+            text-align: center;
+            padding: 60px 20px;
+            animation: celebration-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes celebration-glow {
+            0%, 100% {
+                transform: scale(1);
+                filter: brightness(1);
+            }
+            50% {
+                transform: scale(1.05);
+                filter: brightness(1.2);
+            }
+        }
+
+        .celebration-text {
+            font-size: 4em;
+            font-weight: 900;
+            text-shadow: 0 0 50px rgba(251, 191, 36, 1);
+            margin-bottom: 20px;
+        }
+
+        .blessing {
+            font-size: 2em;
+            color: #fde68a;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .stat-card {
+            background: rgba(251, 191, 36, 0.12);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid rgba(251, 191, 36, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.3);
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: 800;
+            text-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
+        }
+
+        .blessing-box {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(249, 115, 22, 0.15));
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            margin: 40px 0;
+            border: 2px solid rgba(251, 191, 36, 0.4);
+        }
+
+        .blessing-text {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #fde68a;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .rangoli {
+                font-size: 3.5em;
+            }
+            .time-display {
+                font-size: 3em;
+            }
+            .countdown-number {
+                font-size: 3em;
+            }
+            .celebration-text {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="diyas" id="diyas"></div>
+    <div class="sparkles" id="sparkles"></div>
+    <div class="fireworks-container" id="fireworks"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>✨ Happy Diwali 2025 ✨</h1>
+            <div class="rangoli">🪔</div>
+            <p class="subtitle">Festival of Lights</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn active" onclick="setTheme('light')">☀️ Light</button>
+            <button class="btn" onclick="setTheme('dark')">🌙 Dark</button>
+            <button class="btn" onclick="setTheme('night')">✨ Night</button>
+        </div>
+
+        <div class="clock-toggle">
+            <button class="btn active" onclick="setClockType('digital')">Digital</button>
+            <button class="btn" onclick="setClockType('analog')">Analog</button>
+        </div>
+
+        <div class="digital-clock active" id="digitalClock">
+            <div class="time-display" id="currentTime">--:--:--</div>
+        </div>
+
+        <div class="analog-clock" id="analogClock">
+            <div class="analog-clock-face">
+                <div class="hand hour-hand" id="hourHand"></div>
+                <div class="hand minute-hand" id="minuteHand"></div>
+                <div class="hand second-hand" id="secondHand"></div>
+                <div class="clock-center"></div>
+            </div>
+        </div>
+
+        <div class="countdown-section" id="countdownSection">
+            <div class="countdown-grid">
+                <div class="countdown-box">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="celebrationSection" style="display: none;">
+            <div class="celebration-message">
+                <div class="celebration-text">🪔 Shubh Deepavali! 🪔</div>
+                <div class="blessing">May the lights of Diwali illuminate your path to prosperity!</div>
+            </div>
+        </div>
+
+        <div class="blessing-box">
+            <div class="blessing-text">दीपावली की शुभकामनाएं</div>
+            <div style="font-size: 1.2em; opacity: 0.9; margin-top: 10px;">"Wishing You a Joyous Diwali"</div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Total Seconds</div>
+                <div class="stat-value" id="totalSeconds">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Hours</div>
+                <div class="stat-value" id="totalHours">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Days Left</div>
+                <div class="stat-value" id="daysLeft">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Diyas Lit</div>
+                <div class="stat-value" id="diyasLit">🪔</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const targetDate = new Date('2025-10-20T00:00:00');
+        let isCelebrating = false;
+
+        function createDiyas() {
+            const container = document.getElementById('diyas');
+            for (let i = 0; i < 20; i++) {
+                const diya = document.createElement('div');
+                diya.className = 'diya';
+                diya.textContent = '🪔';
+                diya.style.left = Math.random() * 100 + '%';
+                diya.style.animationDelay = Math.random() * 20 + 's';
+                diya.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(diya);
+            }
+        }
+
+        function createSparkles() {
+            const container = document.getElementById('sparkles');
+            const sparkleSymbols = ['✨', '⭐', '🌟', '💫'];
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.textContent = sparkleSymbols[Math.floor(Math.random() * sparkleSymbols.length)];
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(sparkle);
+            }
+        }
+
+        async function fetchTime() {
+            try {
+                const response = await fetch('https://time.api.codelabworks.is-a.dev/api/time');
+                const data = await response.json();
+                updateClock(new Date(data.datetime));
+            } catch (error) {
+                updateClock(new Date());
+            }
+        }
+
+        function updateClock(now) {
+            document.getElementById('currentTime').textContent = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            document.getElementById('hourHand').style.transform = `rotate(${(hours * 30) + (minutes * 0.5)}deg)`;
+            document.getElementById('minuteHand').style.transform = `rotate(${minutes * 6}deg)`;
+            document.getElementById('secondHand').style.transform = `rotate(${seconds * 6}deg)`;
+
+            updateCountdown(now);
+        }
+
+        function updateCountdown(now) {
+            const diff = targetDate - now;
+
+            if (diff <= 0 && !isCelebrating) {
+                startCelebration();
+                return;
+            }
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+                document.getElementById('totalSeconds').textContent = Math.floor(diff / 1000).toLocaleString();
+                document.getElementById('totalHours').textContent = Math.floor(diff / (1000 * 60 * 60)).toLocaleString();
+                document.getElementById('daysLeft').textContent = days;
+                document.getElementById('diyasLit').textContent = '🪔'.repeat(Math.min(5, Math.floor(days / 10) + 1));
+            }
+        }
+
+        function startCelebration() {
+            isCelebrating = true;
+            document.body.classList.add('celebration');
+            document.getElementById('countdownSection').style.display = 'none';
+            document.getElementById('celebrationSection').style.display = 'block';
+            launchFireworks();
+            setInterval(launchFireworks, 2000);
+        }
+
+        function launchFireworks() {
+            const colors = ['#fbbf24', '#f59e0b', '#fb923c', '#ea580c', '#fde68a', '#ec4899', '#8b5cf6'];
+            const container = document.getElementById('fireworks');
+
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 100 + '%';
+                    firework.style.top = Math.random() * 80 + '%';
+                    firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    container.appendChild(firework);
+                    setTimeout(() => firework.remove(), 1500);
+                }, i * 200);
+            }
+        }
+
+        function setTheme(theme) {
+            document.body.className = theme;
+            if (isCelebrating) document.body.classList.add('celebration');
+            document.querySelectorAll('.controls .btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function setClockType(type) {
+            document.getElementById('digitalClock').classList.remove('active');
+            document.getElementById('analogClock').classList.remove('active');
+            document.getElementById(type === 'digital' ? 'digitalClock' : 'analogClock').classList.add('active');
+            document.querySelectorAll('.clock-toggle .btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        createDiyas();
+        createSparkles();
+        fetchTime();
+        setInterval(fetchTime, 1000);
+    </script>
+</body>
+</html>

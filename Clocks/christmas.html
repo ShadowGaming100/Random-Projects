@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas 2025 🎄</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        body.light {
+            background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+            color: #f0fdf4;
+        }
+
+        body.dark {
+            background: linear-gradient(135deg, #064e3b 0%, #1e3a2e 50%, #0f172a 100%);
+            color: #f0fdf4;
+        }
+
+        body.night {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #020617 100%);
+            color: #f0fdf4;
+        }
+
+        body.celebration {
+            animation: christmas-magic 4s ease-in-out infinite;
+        }
+
+        @keyframes christmas-magic {
+            0%, 100% {
+                background: linear-gradient(135deg, #dc2626 0%, #059669 50%, #dc2626 100%);
+            }
+            50% {
+                background: linear-gradient(135deg, #059669 0%, #dc2626 50%, #059669 100%);
+            }
+        }
+
+        /* Falling snowflakes */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1.5em;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        /* Christmas decorations floating */
+        .decorations {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .decoration {
+            position: absolute;
+            font-size: 2em;
+            animation: float-decoration 15s infinite ease-in-out;
+        }
+
+        @keyframes float-decoration {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: xmas-burst 2s ease-out forwards;
+        }
+
+        @keyframes xmas-burst {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(80);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            animation: slideInTop 1s ease-out;
+        }
+
+        @keyframes slideInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header h1 {
+            font-size: 4.5em;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #fef3c7, #fff, #fef3c7, #dc2626, #fef3c7);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer-gradient 3s ease infinite;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+            letter-spacing: -2px;
+        }
+
+        @keyframes shimmer-gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .tree {
+            font-size: 6em;
+            margin: 20px 0;
+            animation: tree-swing 3s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px rgba(5, 150, 105, 0.8));
+        }
+
+        @keyframes tree-swing {
+            0%, 100% {
+                transform: rotate(-3deg);
+            }
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #fef3c7;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.15);
+            color: inherit;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .clock-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .digital-clock, .analog-clock {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .digital-clock.active, .analog-clock.active {
+            display: block;
+        }
+
+        .time-display {
+            font-size: 6em;
+            font-weight: 800;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.8), 0 0 80px rgba(220, 38, 38, 0.4);
+            margin-bottom: 20px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .analog-clock-face {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(5, 150, 105, 0.2));
+            backdrop-filter: blur(20px);
+            border: 8px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+            margin: 30px auto;
+            box-shadow: 0 0 60px rgba(255, 255, 255, 0.5), inset 0 0 40px rgba(220, 38, 38, 0.2);
+        }
+
+        .clock-center {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #dc2626, #991b1b);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.8);
+        }
+
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        .hour-hand {
+            width: 8px;
+            height: 90px;
+            margin-left: -4px;
+            background: linear-gradient(180deg, #dc2626, #991b1b);
+        }
+
+        .minute-hand {
+            width: 6px;
+            height: 120px;
+            margin-left: -3px;
+            background: linear-gradient(180deg, #059669, #047857);
+        }
+
+        .second-hand {
+            width: 3px;
+            height: 140px;
+            margin-left: -1.5px;
+            background: linear-gradient(180deg, #fef3c7, #fbbf24);
+        }
+
+        .countdown-section {
+            margin: 50px 0;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .countdown-box {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(5, 150, 105, 0.15));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 35px 20px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-box::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #dc2626, #059669, #dc2626);
+            background-size: 200% 200%;
+            border-radius: 25px;
+            z-index: -1;
+            animation: border-rotate 3s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes border-rotate {
+            to {
+                background-position: 200% 200%;
+            }
+        }
+
+        .countdown-box:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
+        }
+
+        .countdown-number {
+            font-size: 4.5em;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-label {
+            font-size: 1.2em;
+            opacity: 0.95;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .celebration-message {
+            text-align: center;
+            padding: 60px 20px;
+            animation: jingle 1s ease-in-out infinite;
+        }
+
+        @keyframes jingle {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(-5deg) scale(1.05);
+            }
+            75% {
+                transform: rotate(5deg) scale(1.05);
+            }
+        }
+
+        .celebration-text {
+            font-size: 4em;
+            font-weight: 900;
+            text-shadow: 0 0 50px rgba(255, 255, 255, 1);
+            margin-bottom: 20px;
+        }
+
+        .santa-message {
+            font-size: 2em;
+            color: #fef3c7;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: 800;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .greeting-box {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(5, 150, 105, 0.15));
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .greeting-text {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #fef3c7;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .tree {
+                font-size: 4em;
+            }
+            .time-display {
+                font-size: 3em;
+            }
+            .countdown-number {
+                font-size: 3em;
+            }
+            .celebration-text {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="snowflakes" id="snowflakes"></div>
+    <div class="decorations" id="decorations"></div>
+    <div class="fireworks-container" id="fireworks"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🎅 Merry Christmas 2025 🎅</h1>
+            <div class="tree">🎄</div>
+            <p class="subtitle">Season of Joy & Wonder</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn active" onclick="setTheme('light')">🎄 Green</button>
+            <button class="btn" onclick="setTheme('dark')">🌙 Cozy</button>
+            <button class="btn" onclick="setTheme('night')">❄️ Snowy</button>
+        </div>
+
+        <div class="clock-toggle">
+            <button class="btn active" onclick="setClockType('digital')">Digital</button>
+            <button class="btn" onclick="setClockType('analog')">Analog</button>
+        </div>
+
+        <div class="digital-clock active" id="digitalClock">
+            <div class="time-display" id="currentTime">--:--:--</div>
+        </div>
+
+        <div class="analog-clock" id="analogClock">
+            <div class="analog-clock-face">
+                <div class="hand hour-hand" id="hourHand"></div>
+                <div class="hand minute-hand" id="minuteHand"></div>
+                <div class="hand second-hand" id="secondHand"></div>
+                <div class="clock-center"></div>
+            </div>
+        </div>
+
+        <div class="countdown-section" id="countdownSection">
+            <div class="countdown-grid">
+                <div class="countdown-box">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="celebrationSection" style="display: none;">
+            <div class="celebration-message">
+                <div class="celebration-text">🎁 Merry Christmas! 🎁</div>
+                <div class="santa-message">Ho Ho Ho! Wishing you joy and peace!</div>
+            </div>
+        </div>
+
+        <div class="greeting-box">
+            <div class="greeting-text">Peace on Earth, Good Will to All</div>
+            <div style="font-size: 1.2em; opacity: 0.9; margin-top: 10px;">May your holidays sparkle with moments of love and laughter</div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Total Seconds</div>
+                <div class="stat-value" id="totalSeconds">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Shopping Days</div>
+                <div class="stat-value" id="shoppingDays">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Weeks Left</div>
+                <div class="stat-value" id="weeksLeft">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Santa Status</div>
+                <div class="stat-value" id="santaStatus">🎅</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const targetDate = new Date('2025-12-25T00:00:00');
+        let isCelebrating = false;
+
+        function createSnowflakes() {
+            const container = document.getElementById('snowflakes');
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.textContent = '❄';
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = (5 + Math.random() * 10) + 's';
+                snowflake.style.animationDelay = Math.random() * 10 + 's';
+                snowflake.style.fontSize = (1 + Math.random() * 1.5) + 'em';
+                container.appendChild(snowflake);
+            }
+        }
+
+        function createDecorations() {
+            const container = document.getElementById('decorations');
+            const decorations = ['🎁', '⛄', '🔔', '🕯️', '🎀', '⭐'];
+            for (let i = 0; i < 15; i++) {
+                const decoration = document.createElement('div');
+                decoration.className = 'decoration';
+                decoration.textContent = decorations[Math.floor(Math.random() * decorations.length)];
+                decoration.style.left = Math.random() * 100 + '%';
+                decoration.style.top = Math.random() * 100 + '%';
+                decoration.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(decoration);
+            }
+        }
+
+        async function fetchTime() {
+            try {
+                const response = await fetch('https://time.api.codelabworks.is-a.dev/api/time');
+                const data = await response.json();
+                updateClock(new Date(data.datetime));
+            } catch (error) {
+                updateClock(new Date());
+            }
+        }
+
+        function updateClock(now) {
+            document.getElementById('currentTime').textContent = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            document.getElementById('hourHand').style.transform = `rotate(${(hours * 30) + (minutes * 0.5)}deg)`;
+            document.getElementById('minuteHand').style.transform = `rotate(${minutes * 6}deg)`;
+            document.getElementById('secondHand').style.transform = `rotate(${seconds * 6}deg)`;
+
+            updateCountdown(now);
+        }
+
+        function updateCountdown(now) {
+            const diff = targetDate - now;
+
+            if (diff <= 0 && !isCelebrating) {
+                startCelebration();
+                return;
+            }
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+                document.getElementById('totalSeconds').textContent = Math.floor(diff / 1000).toLocaleString();
+                document.getElementById('shoppingDays').textContent = days;
+                document.getElementById('weeksLeft').textContent = Math.floor(days / 7);
+                
+                const santaStatuses = ['🎅 Preparing', '🎅 Loading', '🎅 Ready', '🛷 Coming'];
+                const statusIndex = Math.min(3, Math.floor((1 - (days / 365)) * 4));
+                document.getElementById('santaStatus').textContent = santaStatuses[statusIndex];
+            }
+        }
+
+        function startCelebration() {
+            isCelebrating = true;
+            document.body.classList.add('celebration');
+            document.getElementById('countdownSection').style.display = 'none';
+            document.getElementById('celebrationSection').style.display = 'block';
+            launchFireworks();
+            setInterval(launchFireworks, 2500);
+        }
+
+        function launchFireworks() {
+            const colors = ['#dc2626', '#059669', '#fbbf24', '#fff', '#fef3c7'];
+            const container = document.getElementById('fireworks');
+
+            for (let i = 0; i < 7; i++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 100 + '%';
+                    firework.style.top = Math.random() * 80 + '%';
+                    firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    container.appendChild(firework);
+                    setTimeout(() => firework.remove(), 2000);
+                }, i * 200);
+            }
+        }
+
+        function setTheme(theme) {
+            document.body.className = theme;
+            if (isCelebrating) document.body.classList.add('celebration');
+            document.querySelectorAll('.controls .btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function setClockType(type) {
+            document.getElementById('digitalClock').classList.remove('active');
+            document.getElementById('analogClock').classList.remove('active');
+            document.getElementById(type === 'digital' ? 'digitalClock' : 'analogClock').classList.add('active');
+            document.querySelectorAll('.clock-toggle .btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        createSnowflakes();
+        createDecorations();
+        fetchTime();
+        setInterval(fetchTime, 1000);
+    </script>
+</body>
+</html>

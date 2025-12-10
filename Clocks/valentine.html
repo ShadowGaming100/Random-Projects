@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day 2026 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        body.light {
+            background: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #d946ef 100%);
+            color: #fff1f2;
+        }
+
+        body.dark {
+            background: linear-gradient(135deg, #881337 0%, #701a75 50%, #581c87 100%);
+            color: #fff1f2;
+        }
+
+        body.night {
+            background: linear-gradient(135deg, #4c0519 0%, #500724 50%, #1e1b4b 100%);
+            color: #fff1f2;
+        }
+
+        body.celebration {
+            animation: love-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes love-pulse {
+            0%, 100% {
+                background: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #d946ef 100%);
+            }
+            50% {
+                background: linear-gradient(135deg, #ec4899 0%, #d946ef 50%, #f43f5e 100%);
+            }
+        }
+
+        /* Floating hearts */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            animation: float-heart 12s infinite ease-in-out;
+            filter: drop-shadow(0 4px 8px rgba(244, 63, 94, 0.4));
+        }
+
+        @keyframes float-heart {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Roses floating */
+        .roses {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .rose {
+            position: absolute;
+            font-size: 2.5em;
+            animation: drift 15s infinite ease-in-out;
+        }
+
+        @keyframes drift {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(50px, -30px) rotate(15deg);
+            }
+            50% {
+                transform: translate(-30px, 40px) rotate(-10deg);
+            }
+            75% {
+                transform: translate(40px, -20px) rotate(20deg);
+            }
+        }
+
+        /* Sparkles */
+        .sparkles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 1.2em;
+            animation: twinkle-love 3s infinite;
+        }
+
+        @keyframes twinkle-love {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5) rotate(180deg);
+            }
+        }
+
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: love-burst 2s ease-out forwards;
+        }
+
+        @keyframes love-burst {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(75);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 4;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            10% {
+                transform: scale(1.05);
+            }
+            20% {
+                transform: scale(1);
+            }
+            30% {
+                transform: scale(1.05);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+
+        .header h1 {
+            font-size: 4.5em;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #fff1f2, #fda4af, #f472b6, #ec4899, #fff1f2);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: love-gradient 4s ease infinite;
+            text-shadow: 0 0 40px rgba(244, 63, 94, 0.6);
+            letter-spacing: -2px;
+        }
+
+        @keyframes love-gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .love-icon {
+            font-size: 6em;
+            margin: 20px 0;
+            animation: heartpulse 1.5s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 8px 20px rgba(236, 72, 153, 0.6));
+        }
+
+        @keyframes heartpulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #fecdd3;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.15);
+            color: inherit;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
+        }
+
+        .btn.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .clock-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .digital-clock, .analog-clock {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .digital-clock.active, .analog-clock.active {
+            display: block;
+        }
+
+        .time-display {
+            font-size: 6em;
+            font-weight: 800;
+            text-shadow: 0 0 40px rgba(236, 72, 153, 1), 0 0 80px rgba(244, 63, 94, 0.6);
+            margin-bottom: 20px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .analog-clock-face {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.2), rgba(236, 72, 153, 0.2));
+            backdrop-filter: blur(20px);
+            border: 8px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+            margin: 30px auto;
+            box-shadow: 0 0 60px rgba(244, 63, 94, 0.6), inset 0 0 40px rgba(236, 72, 153, 0.3);
+        }
+
+        .clock-center {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #f43f5e, #ec4899);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: 0 0 30px rgba(244, 63, 94, 1);
+        }
+
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        .hour-hand {
+            width: 8px;
+            height: 90px;
+            margin-left: -4px;
+            background: linear-gradient(180deg, #f43f5e, #ec4899);
+        }
+
+        .minute-hand {
+            width: 6px;
+            height: 120px;
+            margin-left: -3px;
+            background: linear-gradient(180deg, #ec4899, #d946ef);
+        }
+
+        .second-hand {
+            width: 3px;
+            height: 140px;
+            margin-left: -1.5px;
+            background: linear-gradient(180deg, #fda4af, #fecdd3);
+        }
+
+        .countdown-section {
+            margin: 50px 0;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .countdown-box {
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(236, 72, 153, 0.15));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 35px 20px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-box::before {
+            content: '💕';
+            position: absolute;
+            font-size: 10em;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: heart-rotate 6s linear infinite;
+        }
+
+        @keyframes heart-rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .countdown-box:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(244, 63, 94, 0.5);
+        }
+
+        .countdown-number {
+            font-size: 4.5em;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(236, 72, 153, 1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-label {
+            font-size: 1.2em;
+            opacity: 0.95;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .celebration-message {
+            text-align: center;
+            padding: 60px 20px;
+            animation: love-float 2s ease-in-out infinite;
+        }
+
+        @keyframes love-float {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-15px) scale(1.03);
+            }
+        }
+
+        .celebration-text {
+            font-size: 4em;
+            font-weight: 900;
+            text-shadow: 0 0 50px rgba(236, 72, 153, 1);
+            margin-bottom: 20px;
+        }
+
+        .love-message {
+            font-size: 2em;
+            color: #fecdd3;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(244, 63, 94, 0.4);
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: 800;
+            text-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+        }
+
+        .love-quote {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(236, 72, 153, 0.15));
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .quote-text {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #fecdd3;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .love-icon {
+                font-size: 4em;
+            }
+            .time-display {
+                font-size: 3em;
+            }
+            .countdown-number {
+                font-size: 3em;
+            }
+            .celebration-text {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="hearts" id="hearts"></div>
+    <div class="roses" id="roses"></div>
+    <div class="sparkles" id="sparkles"></div>
+    <div class="fireworks-container" id="fireworks"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>💝 Valentine's Day 2026 💝</h1>
+            <div class="love-icon">💕</div>
+            <p class="subtitle">Celebrate Love & Romance</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn active" onclick="setTheme('light')">💖 Passion</button>
+            <button class="btn" onclick="setTheme('dark')">🌹 Romance</button>
+            <button class="btn" onclick="setTheme('night')">✨ Intimate</button>
+        </div>
+
+        <div class="clock-toggle">
+            <button class="btn active" onclick="setClockType('digital')">Digital</button>
+            <button class="btn" onclick="setClockType('analog')">Analog</button>
+        </div>
+
+        <div class="digital-clock active" id="digitalClock">
+            <div class="time-display" id="currentTime">--:--:--</div>
+        </div>
+
+        <div class="analog-clock" id="analogClock">
+            <div class="analog-clock-face">
+                <div class="hand hour-hand" id="hourHand"></div>
+                <div class="hand minute-hand" id="minuteHand"></div>
+                <div class="hand second-hand" id="secondHand"></div>
+                <div class="clock-center"></div>
+            </div>
+        </div>
+
+        <div class="countdown-section" id="countdownSection">
+            <div class="countdown-grid">
+                <div class="countdown-box">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="celebrationSection" style="display: none;">
+            <div class="celebration-message">
+                <div class="celebration-text">💝 Happy Valentine's Day! 💝</div>
+                <div class="love-message">Sending you all my love today and always!</div>
+            </div>
+        </div>
+
+        <div class="love-quote">
+            <div class="quote-text">"Love is not just looking at each other,<br>it's looking in the same direction."</div>
+            <div style="font-size: 1.2em; opacity: 0.9; margin-top: 10px;">— Antoine de Saint-Exupéry</div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Total Seconds</div>
+                <div class="stat-value" id="totalSeconds">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Heartbeats</div>
+                <div class="stat-value" id="heartbeats">💗</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Weeks Left</div>
+                <div class="stat-value" id="weeksLeft">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Love Level</div>
+                <div class="stat-value" id="loveLevel">❤️</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const targetDate = new Date('2026-02-14T00:00:00');
+        let isCelebrating = false;
+
+        function createHearts() {
+            const container = document.getElementById('hearts');
+            const heartTypes = ['❤️', '💖', '💗', '💕', '💓', '💝'];
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 12 + 's';
+                heart.style.animationDuration = (10 + Math.random() * 6) + 's';
+                heart.style.fontSize = (1.5 + Math.random() * 1) + 'em';
+                container.appendChild(heart);
+            }
+        }
+
+        function createRoses() {
+            const container = document.getElementById('roses');
+            for (let i = 0; i < 12; i++) {
+                const rose = document.createElement('div');
+                rose.className = 'rose';
+                rose.textContent = '🌹';
+                rose.style.left = Math.random() * 90 + '%';
+                rose.style.top = Math.random() * 90 + '%';
+                rose.style.animationDelay = Math.random() * 15 + 's';
+                container.appendChild(rose);
+            }
+        }
+
+        function createSparkles() {
+            const container = document.getElementById('sparkles');
+            for (let i = 0; i < 25; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.textContent = '✨';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 3 + 's';
+                container.appendChild(sparkle);
+            }
+        }
+
+        async function fetchTime() {
+            try {
+                const response = await fetch('https://time.api.codelabworks.is-a.dev/api/time');
+                const data = await response.json();
+                updateClock(new Date(data.datetime));
+            } catch (error) {
+                updateClock(new Date());
+            }
+        }
+
+        function updateClock(now) {
+            document.getElementById('currentTime').textContent = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            document.getElementById('hourHand').style.transform = `rotate(${(hours * 30) + (minutes * 0.5)}deg)`;
+            document.getElementById('minuteHand').style.transform = `rotate(${minutes * 6}deg)`;
+            document.getElementById('secondHand').style.transform = `rotate(${seconds * 6}deg)`;
+
+            updateCountdown(now);
+        }
+
+        function updateCountdown(now) {
+            const diff = targetDate - now;
+
+            if (diff <= 0 && !isCelebrating) {
+                startCelebration();
+                return;
+            }
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+                const totalSeconds = Math.floor(diff / 1000);
+                document.getElementById('totalSeconds').textContent = totalSeconds.toLocaleString();
+                
+                const heartCount = Math.min(5, Math.floor(days / 15) + 1);
+                document.getElementById('heartbeats').textContent = '💗'.repeat(heartCount);
+                
+                document.getElementById('weeksLeft').textContent = Math.floor(days / 7);
+                
+                const loveLevels = ['❤️', '❤️💖', '❤️💖💗', '❤️💖💗💕', '❤️💖💗💕💓'];
+                const loveIndex = Math.min(4, Math.floor((1 - (days / 365)) * 5));
+                document.getElementById('loveLevel').textContent = loveLevels[loveIndex];
+            }
+        }
+
+        function startCelebration() {
+            isCelebrating = true;
+            document.body.classList.add('celebration');
+            document.getElementById('countdownSection').style.display = 'none';
+            document.getElementById('celebrationSection').style.display = 'block';
+            launchFireworks();
+            setInterval(launchFireworks, 1800);
+        }
+
+        function launchFireworks() {
+            const colors = ['#f43f5e', '#ec4899', '#d946ef', '#fda4af', '#fecdd3'];
+            const container = document.getElementById('fireworks');
+
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 100 + '%';
+                    firework.style.top = Math.random() * 80 + '%';
+                    firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    container.appendChild(firework);
+                    setTimeout(() => firework.remove(), 2000);
+                }, i * 180);
+            }
+        }
+
+        function setTheme(theme) {
+            document.body.className = theme;
+            if (isCelebrating) document.body.classList.add('celebration');
+            document.querySelectorAll('.controls .btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function setClockType(type) {
+            document.getElementById('digitalClock').classList.remove('active');
+            document.getElementById('analogClock').classList.remove('active');
+            document.getElementById(type === 'digital' ? 'digitalClock' : 'analogClock').classList.add('active');
+            document.querySelectorAll('.clock-toggle .btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        createHearts();
+        createRoses();
+        createSparkles();
+        fetchTime();
+        setInterval(fetchTime, 1000);
+    </script>
+</body>
+</html>
